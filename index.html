@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Circles</title>
+
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css.map">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="circles">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+              aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Circles</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Dashboard</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" style="margin-top: 60px">
+  <div ng-controller="DashboardCtrl as dashboard">
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-primary"
+                ng-click="dashboard.addNode()">Add
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="cy"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/cytoscape/dist/cytoscape.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/Dashboard/dashboard-controller.js"></script>
+<script src="./js/Dashboard/dashboard-service.js"></script>
+</body>
+</html>
